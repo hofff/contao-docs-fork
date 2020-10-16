@@ -23,10 +23,11 @@ Die Websitebesucher:innen müssen über diese Datenerhebung aufgeklärt werden. 
 
 ### Cookies
 
-Der Contao Core setzt grundsätzlich erstmal **keine** Cookies (ab 4.9). Es gibt jedoch zwei Ausnahmen:
+Der Contao Core setzt grundsätzlich erstmal **keine** Cookies (ab 4.9). Es gibt jedoch drei Ausnahmen:
 
 1. Auf der Website wird ein Formular genutzt, dann wird auf der Seite mit dem Formular ein CSRF-Token (`csrf_contao_csrf_token`) gesetzt, um CSRF-Attacken ([Cross Site Requests Forgery](https://de.wikipedia.org/wiki/Cross-Site-Request-Forgery)) zu unterbinden.
 2. Auf der Website wird ein Login verwendet, dann wird nach erfolgreichem Login ein PHP-Session-Cookie (`PHPSESSID`) gesetzt, um die Login-Informationen über mehrere Seiten der Internetpräsenz weiter zureichen.
+3. Auf der Website wird ein Login mit "Autologin erlauben" bzw. "Angemeldet bleiben" verwendet, dann wird nach erfolgreichem Login ein Cookie (`REMEMBERME`) gesetzt, um die Login-Informationen über einen bestimmten Zeitraum zu speichern.
 
 Diese Cookies sind absolut ungefährlich und beinhalten lediglich eine zufällige ID, welche aber seitens Contao nicht gespeichert wird.
 
@@ -56,7 +57,7 @@ Diese Cookies sind absolut ungefährlich und beinhalten lediglich eine zufällig
 | ----------- | ------------------------------------------------------------ |
 | Name:       | `REMEMBERME` Der Name kann in den PHP-Einstellungen des Webspaces oder in den  individualisiert werden. Der Name kann in der `config.yml` individualisiert werden – siehe [System > Einstellungen](../system/einstellungen/#config-yml) -- Dokumentation? https://symfony.com/doc/current/security/remember_me.html |
 | Typ:        | HTTP-Cookie                                                  |
-| Zweck:      | Identifiziert die aktuelle PHP-Session, um bestimmte Informationen über mehrere Seiten zur Verfügung zu stellen. |
+| Zweck:      | Identifiziert die aktuelle PHP-Session, um die Login-Informationen über einen bestimmten Zeitraum zu speichern. |
 | Gültigkeit: | 1 Jahr                                                       |
 | Anbieter:   | Eigentümer der Website (keine Übermittlung an Drittanbieter) |
 

@@ -61,6 +61,21 @@ Diese Cookies sind absolut ungefährlich und beinhalten lediglich eine zufällig
 | Gültigkeit: | 1 Jahr                                                       |
 | Anbieter:   | Eigentümer der Website (keine Übermittlung an Drittanbieter) |
 
+
+
+### Registrierung/Newsletter/Benachrichtigung bei Kommentaren/Passwort vergessen
+
+| Eigenschaft                                                  | Beschreibung                                                 |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Welche Daten werden gespeichert?                             | - Token<br />- Datum/Uhrzeit der Anmeldung<br />- Datum/Uhrzeit der Bestätigung<br />- E-Mail-Adresse |
+| Double Opt-In?                                               | ja                                                           |
+| Gültigkeitsdauer Bestätigungslink?                           | 24 h                                                         |
+| Wie wird mit den Daten umgegangen, wenn der Bestätigungslink **nicht** binnen 24 h bestätigt wird? | Die Daten werden spätestens nach 3 Tagen automatisch gelöscht. |
+| Wie wird mit den Daten umgegangen, wenn der Bestätigungslink binnen 24 h bestätigt wird? | Die Daten werden für 3 Jahre gespeichert.<br /><br />Wenn der bestätigte Eintrag nach 3 Jahren noch vorhanden ist, wird das Token automatisch um weitere 3 Jahre (nach Bestätigungsdatum) verlängert.<br /><br />Wenn der bestätigte Eintrag nach 3 Jahren **nicht** mehr vorhanden ist, wird das Token automatisch nach 3 Jahren (nach Bestätigungsdatum) gelöscht. |
+| Benamung der Token                                           | - com-\*\*\* – Kommentarbenachrichtigungen<br />- nl-\*\*\* – Newsletteranmeldung<br />- pw-\*\*\* – Passwort vergessen<br />- reg-\*\*\* – Registrierung |
+
+
+
 ### System-Log/Logfiles
 
 Contao speichert verschiedene Informationen unterschiedlich lange. Neben Informationen die ausschließlich für Backendbenutzer relevant sind, werden für Websitebesucher:innen folgende Informationen gespeichert:
@@ -113,19 +128,6 @@ Beim Versand eines Formulares erstellt Contao einen Eintrag im System-Log. Der E
 
 ***Wer kann die Einträge in den Logfiles sehen?***
 
-### Registrierung
-
-- Double Opt-In: JA
-- Gültigkeitsdauer Bestätigungslink: 72h?!
-- Wie wird mit den Daten umgegangen, wenn der Bestätigungslink nicht binnen 72 h bestätigt wird?
-
 ### Login
 
 ### Kommentare
-
-### Newsletter
-
-- Double Opt-In: JA
-- Gültigkeitsdauer Bestätigungslink: 72h?!
-- Wie wird mit den Daten umgegangen, wenn der Bestätigungslink nicht binnen 72 h bestätigt wird?
-
